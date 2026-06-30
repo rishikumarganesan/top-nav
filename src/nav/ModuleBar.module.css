@@ -1,0 +1,66 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: #333333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px;
+  height: 22px;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.item:hover {
+  background: rgba(122, 122, 122, 0.15);
+}
+
+.item:focus-visible {
+  outline: 2px solid #F37579;
+  outline-offset: 2px;
+}
+
+.active {
+  background: rgba(122, 122, 122, 0.2) !important;
+}
+
+.moduleIcon {
+  font-size: 11px;
+  color: #F37579;
+  flex-shrink: 0;
+}
+
+.moduleLabel {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+}
