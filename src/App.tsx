@@ -1,13 +1,16 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import GlobalNav from './nav/GlobalNav'
+import ContentArea from './nav/ContentArea'
 import PlaceholderPage from './pages/PlaceholderPage'
 import styles from './App.module.css'
 
 export default function App() {
   return (
     <HashRouter>
+      {/* GlobalNav lives outside ContentArea — it never unmounts on navigation. */}
       <GlobalNav />
       <main className={styles.main}>
+        <ContentArea>
         <Routes>
           <Route path="/" element={<Navigate to="/dynamic-pricing/pricing-dashboard" replace />} />
 
@@ -36,6 +39,7 @@ export default function App() {
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </ContentArea>
       </main>
     </HashRouter>
   )
