@@ -3,4 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    allowedHosts: ['sb-lqjrg52q1d3g.vercel.run'],
+  },
 })
